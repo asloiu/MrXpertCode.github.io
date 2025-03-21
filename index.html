@@ -28,7 +28,7 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
-            padding: 1rem 0;
+            padding: 0.5rem 0;
         }
 
         .navbar.scrolled {
@@ -37,9 +37,36 @@
         }
 
         .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0;
+        }
+
+        .navbar-logo {
+            width: 60px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover .navbar-logo {
+            transform: scale(1.05);
+        }
+
+        .navbar-brand-text {
             font-weight: 700;
             color: var(--primary-color);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .navbar-brand-subtext {
+            font-size: 0.7rem;
+            color: #4b5563;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .nav-link {
@@ -569,6 +596,268 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        /* Global Responsive Styles */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 2rem;
+            }
+
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 991px) {
+            /* Navbar */
+            .navbar-brand-text {
+                font-size: 1rem;
+            }
+
+            .navbar-logo {
+                width: 50px;
+            }
+
+            /* Hero Section */
+            .hero {
+                min-height: auto;
+                padding: 8rem 0 4rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+
+            .hero-subtitle {
+                text-align: center;
+            }
+
+            .hero .cta-button {
+                margin: 0 auto;
+                display: block;
+            }
+
+            .hero img {
+                margin-top: 3rem;
+            }
+
+            /* Services Section */
+            .services {
+                padding: 4rem 0;
+            }
+
+            .service-card {
+                margin-bottom: 2rem;
+            }
+
+            /* Blog Section */
+            .blog-card {
+                margin-bottom: 2rem;
+            }
+
+            /* Contact Section */
+            .contact-info {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Global */
+            section {
+                padding: 3rem 0 !important;
+            }
+
+            .section-title {
+                margin-bottom: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            /* Hero Section */
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            /* Services Section */
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .service-icon {
+                font-size: 2rem;
+            }
+
+            /* Testimonials Section */
+            .testimonial-card {
+                margin: 1rem 0;
+            }
+
+            /* Blog Section */
+            .blog-image {
+                height: 180px;
+            }
+
+            /* Contact Section */
+            .contact-info {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .appointment-form {
+                padding: 1.5rem;
+            }
+
+            .map-container {
+                margin-top: 2rem;
+            }
+
+            /* Footer */
+            .footer {
+                padding: 3rem 0 1rem;
+            }
+
+            .social-links {
+                margin-top: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            /* Global */
+            .container {
+                padding: 0 1rem;
+            }
+
+            /* Navbar */
+            .navbar {
+                padding: 0.5rem 0;
+            }
+
+            .navbar-brand-subtext {
+                display: none;
+            }
+
+            .navbar-logo {
+                width: 40px;
+            }
+
+            /* Hero Section */
+            .hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            /* Services Section */
+            .service-card {
+                padding: 1.2rem;
+            }
+
+            .service-icon {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+
+            /* Testimonials Section */
+            .testimonial-card {
+                padding: 1.2rem;
+            }
+
+            .testimonial-image {
+                width: 50px;
+                height: 50px;
+            }
+
+            /* Blog Section */
+            .blog-image {
+                height: 160px;
+            }
+
+            .blog-content {
+                padding: 1.2rem;
+            }
+
+            /* Why Choose Us Section */
+            .feature-card {
+                padding: 1.5rem;
+            }
+
+            .feature-number {
+                font-size: 2.5rem;
+            }
+
+            /* Contact Section */
+            .contact-card {
+                padding: 1.5rem;
+            }
+
+            .contact-icon {
+                font-size: 1.8rem;
+            }
+
+            /* Chat Widget */
+            .chat-widget {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .chat-button {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        /* Fix for very small devices */
+        @media (max-width: 360px) {
+            .navbar-brand-text {
+                font-size: 0.9rem;
+            }
+
+            .hero-title {
+                font-size: 1.6rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+
+            .feature-number {
+                font-size: 2rem;
+            }
+        }
+
+        /* Fix for landscape mode */
+        @media (max-height: 600px) and (orientation: landscape) {
+            .hero {
+                min-height: auto;
+                padding: 6rem 0 3rem;
+            }
+
+            .navbar {
+                padding: 0.3rem 0;
+            }
+        }
     </style>
 </head>
 
@@ -576,7 +865,13 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">EyeHealthCoachNepal</a>
+            <a class="navbar-brand" href="#">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Ccircle cx='250' cy='250' r='240' fill='%23312E81'/%3E%3Cpath d='M250 100 C 150 150, 150 350, 250 400 C 350 350, 350 150, 250 100' fill='white'/%3E%3Ccircle cx='250' cy='250' r='80' fill='%23312E81'/%3E%3Ccircle cx='250' cy='250' r='40' fill='white'/%3E%3Cpath d='M100 250 C 150 150, 350 150, 400 250 C 350 350, 150 350, 100 250' fill='%2393C5FD' fill-opacity='0.6'/%3E%3Cpath d='M100 250 C 150 350, 350 350, 400 250 C 350 150, 150 150, 100 250' fill='%23FCD34D' fill-opacity='0.6'/%3E%3Cpath d='M250 100 C 350 150, 350 350, 250 400 C 150 350, 150 150, 250 100' fill='%2360A5FA' fill-opacity='0.4'/%3E%3C/svg%3E" alt="Eye Health Coach Nepal Logo" class="navbar-logo">
+                <div>
+                    <span class="navbar-brand-text">Eye Health Coach Nepal</span>
+                    <span class="navbar-brand-subtext">Since 2019AD</span>
+                </div>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
